@@ -37,10 +37,12 @@ h1 {
 	margin-bottom: 0.5rem;
 }
 
-main {
+section {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	gap: 1.5rem;
+	width: fit-content;
+	margin: 0 auto;
 }
 
 .project {
@@ -51,12 +53,18 @@ main {
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.project h2 {
+h2 {
+	font-size: 1.6rem;
+	text-align: center;
+	margin: 1.75rem 0 1.25rem;
+}
+
+.project h3 {
 	font-size: 1.25rem;
 	margin-bottom: 0.5rem;
 }
 
-.project h3 {
+.project h4 {
 	font-size: 1rem;
 	margin-top: 0.6rem;
 }
@@ -74,8 +82,31 @@ main {
 	text-decoration: underline;
 }
 
+.scope {
+font-weight: bold;
+	color: rgb(25, 194, 129);
+	font-style: italic;
+	font-weight: bold;
+	font-style: italic;
+	color: #666;
+	/*padding: 0 3px 3px 5px;
+	margin-left: 2px;
+	box-shadow: -1px -1px 1.75px 0px color-mix(in srgb, var(--accent) 70%, transparent),
+	            inset 1px 1px 1.25px 0px color-mix(in srgb, var(--accent) 30%, transparent);
+	clip-path: xywh(-2px -4px calc(100% + 2px) 100%);*/
+	padding-right: 3px;
+}
+
+.links:not(:last-child),
+li > .links {
+	margin-bottom: 0.5em;
+}
 .links a {
-	display: block;
+	display: table;
 	line-height: 1.25;
 	font-size: 90%;
+}
+
+ul {
+	margin-left: 1.25rem;
 }
