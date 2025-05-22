@@ -20,104 +20,122 @@
 	
 	<main id="projects">
 		
-		<div class="project">
-			<h2>Stack Sticky-positioned Elements (WIP)</h2>
-			<p>Makes sticky-positioned HTML elements stick below/above other sticky elements so that they all remain visible.</p>
-			<div class="links">
-				<a href="https://github.com/wizard04wsu/stacked-stickies">GitHub repo</a>
-			</div>
-		</div>
-		
-		<div class="project">
-			<h2>Adaptive Image HTML Component</h2>
-			<img src="assets/adaptive-image.png" style="float:left; max-width: 30%; margin-right: 1rem;">
-			<p>A responsive web component for images. Simplifies scaling, fit, and alignment. Includes support for SVGs.</p>
-			<div class="links">
-				<a href="https://wizard04wsu.github.io/adaptive-image/index.html">Demo page</a>
-				<a href="https://github.com/wizard04wsu/adaptive-image">GitHub repo</a>
-			</div>
-		</div>
-		
-		<div class="project">
-			<h2>Image Converter</h2>
-			<p>Drag &amp; drop images onto this tool to save them to another format, resized and with a chosen background color.</p>
-			<div class="links">
-				<a href="https://wizard04wsu.github.io/convert-images/converter.htm">Image Converter</a>
-				<a href="https://github.com/wizard04wsu/convert-images">GitHub repo</a>
-			</div>
-		</div>
-		
-		<div class="project">
-			<h2>Improved JavaScript Type Testing</h2>
-			<p>A robust alternative to basic type testing in JavaScript. Created to simplify the often lengthy verification of parameter values.</p>
-			<div class="links">
-				<a href="https://github.com/wizard04wsu/javascript-type-testing">GitHub repo</a>
-			</div>
-		</div>
-		
-		<div class="project">
-			<h2>Excel VBA Macros</h2>
+		<h2>Top Tools</h2>
+		<section>
 			
-			<h3>Copy/Paste</h3>
-			<p>Three ways to copy &amp; paste in Excel VBA.</p>
-			<div class="links">
-				<a href="https://gist.github.com/wizard04wsu/edef38207f6c115bc07e7e1fae722987">Gist</a>
+			<div class="project">
+				<h3>Adaptive Image Component</h3>
+				<img src="assets/adaptive-image.png" style="max-width: 100%; max-height: 150px; margin: 0 auto; display: block;">
+				<p><span class="scope">Problem:</span> Making images responsive across multiple layouts is challenging when there are so many combinations of sizing, alignment, and fit that can work differently based on the image itself (SVGs in particular) and its containing element(s).</p>
+				<p><span class="scope">Solution:</span> A web component to handle the inconsistencies, isolate the layout and styling, and use element attributes for the basic configuration.</p>
+				<div class="links">
+					<a href="https://wizard04wsu.github.io/adaptive-image/index.html">Demo</a>
+					<a href="https://github.com/wizard04wsu/adaptive-image">GitHub</a>
+				</div>
 			</div>
 			
-			<h3>Strip HTML</h3>
-			<p>Strip HTML tags from selected cells.</p>
-			<div class="links">
-				<a href="https://gist.github.com/wizard04wsu/cf842fbe1e12c8a7fc1d571a38abe99d">Gist</a>
+			<div class="project">
+				<h3>Regex Parsers, Grammars, and Syntax Highlighting</h3>
+				<img src="assets/regex-highlighting.png" style="max-width: 100%;">
+				<p><span class="scope">Problem:</span> Syntax highlighting for regular expressions is usually done the same as if it were a simple string, making it difficult to troubleshoot a regex without an external tool.</p>
+				<p><span class="scope">Solution:</span> Two Tree-sitter grammars &amp; parsers for JavaScript regular expressions (<a href="https://github.com/wizard04wsu/tree-sitter-regex-unicode-js">with</a> and <a href="https://github.com/wizard04wsu/tree-sitter-regex-js">without</a> the Unicode flag). These provided syntax highlighting for the (now sunsetted) Atom text editor.</p>
+				<div class="links">
+					<a href="https://github.com/wizard04wsu/javascript-regex">GitHub</a>
+				</div>
 			</div>
 			
-			<h3>Files &amp; Folders</h3>
-			<p>Functions for and example of traversing files and folders.</p>
-			<div class="links">
-				<a href="https://gist.github.com/wizard04wsu/50652ba20f4163ca774e62717d06e945">Gist</a>
+			<div class="project">
+				<h3>Improved JavaScript Type Testing</h3>
+				<p><span class="scope">Problem:</span> Checking the type and validity of values in JavaScript can be lengthy. Type coercion makes it complicated and error prone. And if you don't know the ins-and-outs, you can get some pretty unexpected results.</p>
+				<p><span class="scope">Solution:</span> A robust alternative to basic type testing, making the code more comprehensible and the outcomes more predictable.</p>
+				<div class="links">
+					<a href="https://github.com/wizard04wsu/javascript-type-testing">GitHub</a>
+				</div>
 			</div>
 			
-			<h3>Miscellaneous</h3>
-			<p>Macros for simple stuff I've done often, including changing text casing and number formatting.</p>
-			<div class="links">
-				<a href="https://gist.github.com/wizard04wsu/50652ba20f4163ca774e62717d06e945">Gist</a>
+			<div class="project">
+				<h3>Element Dimensions</h3>
+				<p>This JavaScript function provides all the positions and dimensions of an element's boxes, including margins, borders, scrollbar gutters, padding, and content. Positions can be relative to the viewport, another element, or a given coordinate.</p>
+				<div class="links">
+					<a href="https://github.com/wizard04wsu/element-dimensions">GitHub</a>
+				</div>
 			</div>
-		</div>
+			
+			<div class="project">
+				<h3>URI and Email Address Validation</h3>
+				<p><span class="scope">Problem:</span>Getting info from a URL is usually rather easy, but detecting obfuscated hostnames or using URIs with schemes other than HTTP and HTTPS can be more complicated.</p>
+				<p>Also, I've encountered forms that require an email address but that don't accept anything but the most basic addresses as valid.</p>
+				<p><span class="scope">Solution:</span> Functions to validate, parse, and normalize URIs and email addresses according to specs.</p>
+				<div class="links">
+					<a href="https://github.com/wizard04wsu/URI_Parsing">GitHub</a>
+				</div>
+			</div>
+			
+		</section>
 		
-		<div class="project">
-			<h2>URI and Email Address Parser</h2>
-			<p>JavaScript functions for validating, parsing, and normalizing URIs and email addresses.</p>
-			<div class="links">
-				<a href="https://github.com/wizard04wsu/URI_Parsing">GitHub repo</a>
-			</div>
-		</div>
-		
-		<div class="project">
-			<h2>Regex Parsers and Syntax Highlighting</h2>
-			<p>Two Tree-sitter grammars &amp; parsers for JavaScript regular expressions (<a href="https://github.com/wizard04wsu/tree-sitter-regex-unicode-js">with</a> and <a href="https://github.com/wizard04wsu/tree-sitter-regex-js">without</a> the Unicode flag). These were used to provide syntax highlighting for the (now sunsetted) Atom text editor.</p>
-			<img src="assets/regex-highlighting.png" style="max-width: 100%;">
-			<div class="links">
-				<a href="https://github.com/wizard04wsu/javascript-regex">GitHub repo</a>
-			</div>
-		</div>
-		
-		<div class="project">
-			<h2>Language Grammars</h2>
-			<p>In addition to the regex grammars, these were all created for syntax highlighting.</p>
+		<h2>Hardware Hacks</h2>
+		<section>
 			
-			<h3>G-code</h3>
-			<p>A TextMate grammar for g-code, particularly for <abbr title="fused filament fabrication">FFF</abbr>/<abbr title="fused deposition modeling">FDM</abbr> 3D printing.</p>
-			<div class="links">
-				<a href="https://github.com/wizard04wsu/language-gcode-fff">GitHub repo</a>
+		</section>
+		
+		<h2>Miscellaneous Mentionables</h2>
+		<section>
+			
+			<div class="project">
+				<h3>Stack Sticky-positioned Elements (WIP)</h3>
+				<p><span class="scope">Problem:</span> A sticky-positioned HTML element can overlap or be hidden by another in the same containing block.</p>
+				<p><span class="scope">Solution:</span> Position elements so they "stack" above/below each other to remain visible until the container itself scrolls out of view.</p>
+				<div class="links">
+					<a href="https://github.com/wizard04wsu/stacked-stickies">GitHub</a>
+				</div>
 			</div>
 			
-			<h3>Roll20 Scripts</h3>
-			<p>A Tree-sitter grammar for macros, abilities, and roll templates on <a href="https://roll20.net/">Roll20</a>.</p>
-			<p>A TextMate grammar just for macros.</p>
-			<div class="links">
-				<a href="https://github.com/wizard04wsu/tree-sitter-roll20-script">GitHub repo (Tree-sitter)</a>
-				<a href="https://github.com/wizard04wsu/language-roll20-macro">GitHub repo (TextMate)</a>
+			<div class="project">
+				<h3>Office Macros</h3>
+				<p>A collection of Microsoft Office templates, macros, and VBA subs/functions to get around VBA headaches (like arrays), automate things for coworkers, and process all kinds of data.</p>
 			</div>
-		</div>
+			
+			<div class="project">
+				<h3>Language Grammars</h3>
+				<p>In addition to the regex grammars, these were all created for syntax highlighting.</p>
+				
+				<h4>G-code</h4>
+				<ul>
+					<li>
+						<p>A TextMate grammar for g-code, particularly for <abbr title="fused filament fabrication">FFF</abbr>/<abbr title="fused deposition modeling">FDM</abbr> 3D printing.</p>
+						<div class="links">
+							<a href="https://github.com/wizard04wsu/language-gcode-fff">GitHub</a>
+						</div>
+					</li>
+				</ul>
+				
+				<h4>Roll20 Scripts</h4>
+				<ul>
+					<li>
+						<p>A Tree-sitter grammar for macros, abilities, and roll templates on <a href="https://roll20.net/">Roll20</a>.</p>
+						<div class="links">
+							<a href="https://github.com/wizard04wsu/tree-sitter-roll20-script">GitHub</a>
+						</div>
+					</li>
+					<li>
+						<p>A TextMate grammar just for the macros.</p>
+						<div class="links">
+							<a href="https://github.com/wizard04wsu/language-roll20-macro">GitHub</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="project">
+				<h3>Image Converter</h3>
+				<p>Drop any image onto the page to resize it and/or add a background color (for images with transparency), then save it as a PNG or JPEG. Just a simple use of the HTML <code>&lt;canvas&gt;</code> element.</p>
+				<div class="links">
+					<a href="https://wizard04wsu.github.io/convert-images/converter.htm">Image Converter</a>
+					<a href="https://github.com/wizard04wsu/convert-images">GitHub</a>
+				</div>
+			</div>
+			
+		</section>
 		
 	</main>
 	
