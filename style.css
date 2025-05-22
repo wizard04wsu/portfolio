@@ -125,3 +125,12 @@ ul {
 	gap: 10px;
 	justify-items: anchor-center;
 }
+
+#contact a {
+	color: rgb(25, 194, 129);
+}
+#contact a span {
+	color: black;
+	font-size: 150%;
+	vertical-align: bottom;
+}
