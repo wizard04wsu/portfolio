@@ -83,8 +83,12 @@ h2 {
 	text-decoration: underline;
 }
 
+.project img {
+	max-width: 100%;
+}
+
 .scope {
-font-weight: bold;
+	font-weight: bold;
 	color: rgb(25, 194, 129);
 	font-style: italic;
 	font-weight: bold;
@@ -110,4 +114,15 @@ li > .links {
 
 ul {
 	margin-left: 1.25rem;
+}
+
+.picgrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(max(200px, 30%), 1fr));
+	gap: 10px;
+	justify-items: anchor-center;
+}
+.picgrid img {
+	max-height: 300px;
+	display: block;
 }
