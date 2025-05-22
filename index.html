@@ -5,27 +5,41 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
-	<title>My Tools Portfolio</title>
+	<title>Andy's Problem-Solving Tools</title>
 	
 	<link rel="stylesheet" href="style.css">
+	
+	<script src="https://kit.fontawesome.com/d0b7553149.js" crossorigin="anonymous"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', ()=>{
+			document.querySelectorAll('a[data-local][data-domain]').forEach((elem)=>elem.addEventListener('focus', updateEmailLink));
+			function updateEmailLink(event){
+				const data = event.target.dataset;
+				event.target.href = `mailto:${data.local}@${data.domain}`;
+				event.target.removeEventListener('focus', updateEmailLink);
+				return true;
+			}
+		});
+	</script>
 	
 </head>
 <body>
 	
 	<header>
 		<h1>Andy's Problem-Solving Tools</h1>
-		<p>Various tools I've built to make life easier.</p>
-		<p><a href="https://github.com/wizard04wsu">@wizard04wsu</a></p>
+		<p>Various development tools and other fun stuff I've built to make life easier.</p>
+		<p><a href="#" data-local="andrew.harrison.404" data-domain="gmail.com"><span class="fa-solid fa-envelope">Email</span></a>
+		 | <a href="https://github.com/wizard04wsu"><span class="fa-brands fa-github">GitHub</span></a>
+		 | <a href="https://www.linkedin.com/in/andrewharrison404/"><span class="fa-brands fa-linkedin">LinkedIn</span></a></p>
 	</header>
 	
 	<main id="projects">
 		
-		<h2>Top Tools</h2>
 		<section>
 			
 			<div class="project">
 				<h3>Adaptive Image Component</h3>
-				<img src="assets/adaptive-image.png" style="max-width: 100%; max-height: 150px; margin: 0 auto; display: block;">
+				<img src="assets/adaptive-image.png" title="SVG image filling its container" alt="snip from the demo page showing an SVG image of a flower filling its HTML container">
 				<p><span class="scope">Problem:</span> Making images responsive across multiple layouts is challenging when there are so many combinations of sizing, alignment, and fit that can work differently based on the image itself (SVGs in particular) and its containing element(s).</p>
 				<p><span class="scope">Solution:</span> A web component to handle the inconsistencies, isolate the layout and styling, and use element attributes for the basic configuration.</p>
 				<div class="links">
@@ -36,11 +50,24 @@
 			
 			<div class="project">
 				<h3>Regex Parsers, Grammars, and Syntax Highlighting</h3>
-				<img src="assets/regex-highlighting.png" style="max-width: 100%;">
+				<img src="assets/regex-highlighting.png" alt="a regular expression with syntax highlighting">
 				<p><span class="scope">Problem:</span> Syntax highlighting for regular expressions is usually done the same as if it were a simple string, making it difficult to troubleshoot a regex without an external tool.</p>
 				<p><span class="scope">Solution:</span> Two Tree-sitter grammars &amp; parsers for JavaScript regular expressions (<a href="https://github.com/wizard04wsu/tree-sitter-regex-unicode-js">with</a> and <a href="https://github.com/wizard04wsu/tree-sitter-regex-js">without</a> the Unicode flag). These provided syntax highlighting for the (now sunsetted) Atom text editor.</p>
 				<div class="links">
 					<a href="https://github.com/wizard04wsu/javascript-regex">GitHub</a>
+				</div>
+			</div>
+			
+			<div class="project">
+				<h3>Piecekeepers</h3>
+				<img src="assets/IMG_E5018.JPG" alt="four trays holding various boardgame pieces">
+				<p><span class="scope">Problem:</span> Boardgame pieces (meeples, money, cards) get messy on the table.</p>
+				<p><span class="scope">Solution:</span> Custom-sized trays that fold flat to fit in the game box and that you can use anywhere. They snap together with magnets and don't have to be aligned any particular way. I've been improving these for over a decade, from chipboard and an X-acto knife to 3D printed with two filaments.</p>
+				<div class="picgrid">
+					<div><img src="assets/IMG_5027.JPG" alt="a stack of flattened trays"></div>
+					<div><img src="assets/IMG_5021.JPG" alt="two folded trays from different angles"></div>
+					<div><img src="assets/IMG_5026.JPG" alt="a tray holding a card"></div>
+					<div><img src="assets/IMG_5024.JPG" alt="two snapped together being held above the table by a corner"></div>
 				</div>
 			</div>
 			
@@ -54,10 +81,29 @@
 			</div>
 			
 			<div class="project">
-				<h3>Element Dimensions</h3>
-				<p>This JavaScript function provides all the positions and dimensions of an element's boxes, including margins, borders, scrollbar gutters, padding, and content. Positions can be relative to the viewport, another element, or a given coordinate.</p>
+				<h3>Audio Mute Module (WIP)</h3>
+				<p><span class="scope">Problem:</span> Muting my computer's audio and mic isn't always easy. Multiple applications can have control of the audio. General audio settings take a few clicks to get to from the taskbar. If I'm gaming, I usually have to leave the window. And if something freezes, good luck getting anything done.</p>
+				<p><span class="scope">Solution:</span> Build a device to mute audio and mic with a couple physical buttons, no software. I have yet to get all the components, but I'm using <a href="https://www.kicad.org/">KiCad</a> and ChatGPT to learn quite a bit about designing a printed circuit board.</p>
+				<div class="picgrid">
+					<div><img src="assets/amm_main_pcb.png" title="PCB for audio jacks and headphone volume" alt="simulated printed circuit board that will have the audio jacks and headphone volume control"></div>
+					<div><img src="assets/amm_panel_pcb.png" title="PCB for buttons and LEDs" alt="simulated printed circuit board that will have the buttons and LEDs"></div>
+				</div>
+			</div>
+			
+			<div class="project">
+				<h3>Office Macros</h3>
+				<p>A collection of Microsoft Office templates, macros, and VBA subs/functions to get around VBA headaches (like arrays), combine Excel workbooks, process data, and generally just automate things for coworkers.</p>
 				<div class="links">
 					<a href="https://github.com/wizard04wsu/element-dimensions">GitHub</a>
+				</div>
+			</div>
+			
+			<div class="project">
+				<h3>Stack Sticky-positioned Elements (WIP)</h3>
+				<p><span class="scope">Problem:</span> A sticky-positioned HTML element can overlap or be hidden by another in the same containing block.</p>
+				<p><span class="scope">Solution:</span> Position elements so they "stack" above/below each other to remain visible until the container itself scrolls out of view.</p>
+				<div class="links">
+					<a href="https://github.com/wizard04wsu/stacked-stickies">GitHub</a>
 				</div>
 			</div>
 			
@@ -71,33 +117,26 @@
 				</div>
 			</div>
 			
-		</section>
-		
-		<h2>Hardware Hacks</h2>
-		<section>
-			
-		</section>
-		
-		<h2>Miscellaneous Mentionables</h2>
-		<section>
-			
 			<div class="project">
-				<h3>Stack Sticky-positioned Elements (WIP)</h3>
-				<p><span class="scope">Problem:</span> A sticky-positioned HTML element can overlap or be hidden by another in the same containing block.</p>
-				<p><span class="scope">Solution:</span> Position elements so they "stack" above/below each other to remain visible until the container itself scrolls out of view.</p>
+				<h3>Element Dimensions</h3>
+				<p>This JavaScript function provides all the positions and dimensions of an element's boxes, including margins, borders, scrollbar gutters, padding, and content. Positions can be relative to the viewport, another element, or a given coordinate.</p>
 				<div class="links">
-					<a href="https://github.com/wizard04wsu/stacked-stickies">GitHub</a>
+					<a href="https://github.com/wizard04wsu/element-dimensions">GitHub</a>
 				</div>
 			</div>
 			
 			<div class="project">
-				<h3>Office Macros</h3>
-				<p>A collection of Microsoft Office templates, macros, and VBA subs/functions to get around VBA headaches (like arrays), automate things for coworkers, and process all kinds of data.</p>
+				<h3>Image Converter</h3>
+				<p>Drop any image onto the page to resize it and/or add a background color (for images with transparency), then save it as a PNG or JPEG. It uses the HTML <code>&lt;canvas&gt;</code> element.</p>
+				<div class="links">
+					<a href="https://wizard04wsu.github.io/convert-images/converter.htm">Image Converter</a>
+					<a href="https://github.com/wizard04wsu/convert-images">GitHub</a>
+				</div>
 			</div>
 			
 			<div class="project">
 				<h3>Language Grammars</h3>
-				<p>In addition to the regex grammars, these were all created for syntax highlighting.</p>
+				<p>In addition to the regex grammars, these were created for syntax highlighting.</p>
 				
 				<h4>G-code</h4>
 				<ul>
@@ -124,15 +163,6 @@
 						</div>
 					</li>
 				</ul>
-			</div>
-			
-			<div class="project">
-				<h3>Image Converter</h3>
-				<p>Drop any image onto the page to resize it and/or add a background color (for images with transparency), then save it as a PNG or JPEG. Just a simple use of the HTML <code>&lt;canvas&gt;</code> element.</p>
-				<div class="links">
-					<a href="https://wizard04wsu.github.io/convert-images/converter.htm">Image Converter</a>
-					<a href="https://github.com/wizard04wsu/convert-images">GitHub</a>
-				</div>
 			</div>
 			
 		</section>
