@@ -85,6 +85,9 @@ h2 {
 
 .project img {
 	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+	max-height: 200px;
 }
 
 .scope {
@@ -118,11 +121,7 @@ ul {
 
 .picgrid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(max(200px, 30%), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(max(128px, 30%), min(300px, 48%)));
 	gap: 10px;
 	justify-items: anchor-center;
-}
-.picgrid img {
-	max-height: 300px;
-	display: block;
 }
