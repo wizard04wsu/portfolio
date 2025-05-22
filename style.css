@@ -126,11 +126,18 @@ ul {
 	justify-items: anchor-center;
 }
 
+#contact {
+	margin-top: 0.75em;
+}
 #contact a {
-	color: rgb(25, 194, 129);
+	color: #666;
 }
 #contact span {
 	color: black;
 	font-size: 150%;
 	vertical-align: bottom;
+	margin-left: 1em;
+}
+#contact span:first-child {
+	margin-left: 0;
 }
