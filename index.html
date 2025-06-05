@@ -10,17 +10,6 @@
 	<link rel="stylesheet" href="style.css">
 	
 	<script src="https://kit.fontawesome.com/d0b7553149.js" crossorigin="anonymous"></script>
-	<script>
-		document.addEventListener('DOMContentLoaded', ()=>{
-			document.querySelectorAll('a[data-local][data-domain]').forEach((elem)=>elem.addEventListener('focus', updateEmailLink));
-			function updateEmailLink(event){
-				const data = event.target.dataset;
-				event.target.href = `mailto:${data.local}@${data.domain}`;
-				event.target.removeEventListener('focus', updateEmailLink);
-				return true;
-			}
-		});
-	</script>
 	
 </head>
 <body>
@@ -28,7 +17,6 @@
 	<header>
 		<h1>Andy's Problem-Solving Tools</h1>
 		<p>Various development tools and other fun stuff I've built to make life easier.</p>
-		<p id="contact"><span class="fa-solid fa-envelope"></span> <a href="#" data-local="andrew.harrison.404" data-domain="gmail.com">Email</a>
 		<span class="fa-brands fa-github"></span> <a href="https://github.com/wizard04wsu">GitHub</a>
 		<span class="fa-brands fa-linkedin"></span> <a href="https://www.linkedin.com/in/andrewharrison404/">LinkedIn</a></p>
 	</header>
